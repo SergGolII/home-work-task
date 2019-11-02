@@ -11,8 +11,14 @@ public class MinValueChecker {
     public int getValue(int[] values) {
 
 //        TODO implements result
-        int result = 0;
-
+        int result = values[0];
+        int i = 1;
+        while (i<values.length){
+            if (values[i]<result){
+                result = values[i];
+            }
+            i++;
+        }
         return result;
     }
 

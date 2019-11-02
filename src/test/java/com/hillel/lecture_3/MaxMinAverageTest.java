@@ -4,12 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-/**
- * Даны три различных числа. Определить, какое из них (первое, второе или третье)
- * самое большое
- * самое маленькое
- * является средним
- */
+
 
 public class MaxMinAverageTest {
 
@@ -48,9 +43,9 @@ public class MaxMinAverageTest {
         int b = 9;
         int c = 9;
 
-        assertEquals(maxMinAverageChecker.getMaxNumber(a, b, c), 0);
-        assertEquals(maxMinAverageChecker.getAverageNumber(a, b, c), 0);
-        assertEquals(maxMinAverageChecker.getMinNumber(a, b, c), 0);
+        assertEquals(maxMinAverageChecker.getMaxNumber(a, b, c), 9);
+        assertEquals(maxMinAverageChecker.getAverageNumber(a, b, c), 9);
+        assertEquals(maxMinAverageChecker.getMinNumber(a, b, c), 9);
     }
 
 }

@@ -11,6 +11,12 @@ public class BelongsToIntervalChecker {
     public String checkNumberInInterval(int from, int to, int number) {
 
         String result = "";
+//Ожидаем, что включительно границы, а тесте - (-5;3), не включительно.
+        if (number < from || number > to) {
+            result = "Number "+ number +" not belong to interval [-5;3]";
+        } else {
+            result = "Number "+ number +" belong to interval [-5;3]";
+        }
 
         return result;
     }

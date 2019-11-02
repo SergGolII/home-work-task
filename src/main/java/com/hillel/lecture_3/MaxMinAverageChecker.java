@@ -12,7 +12,7 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-
+        result = Math.max(Math.min(a, b), c);
         return result;
     }
 
@@ -21,7 +21,13 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-
+        if ((a <= b && a >= c) || (a >= b && a <= c)) {
+            result = a;
+        } else if ((b <= c && b >= a) || (b >= c && b <= a)) {
+            result = b;
+        } else {
+            result = c;
+        }
         return result;
     }
 
@@ -30,7 +36,7 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-
+        result = Math.min(Math.min(a, b), c);
         return result;
     }
 }

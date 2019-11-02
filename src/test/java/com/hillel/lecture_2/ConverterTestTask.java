@@ -1,7 +1,6 @@
 package com.hillel.lecture_2;
 
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
 /**
@@ -13,6 +12,7 @@ public class ConverterTestTask {
     private DistanceConverter distanceConverter = new DistanceConverter();
     private WeightConverter weightConverter = new WeightConverter();
     private SpeedConverter speedConverter = new SpeedConverter();
+    private TimeConverter timeConverter = new TimeConverter();
 
     @Test
     public void celsiusToFahrenheitTest() {
@@ -58,7 +58,7 @@ public class ConverterTestTask {
 
     @Test
     public void kilogramsToPoundsTest() {
-        double expectedResult = 22.0462;
+        double expectedResult = 22.046;
         assertEquals(weightConverter.kilogramsToPounds(10), expectedResult);
     }
 
@@ -78,6 +78,19 @@ public class ConverterTestTask {
     public void speedMiToKmTest() {
         double expectedResult = 16.0926939169617;
         assertEquals(speedConverter.speedMiToKm(10), expectedResult);
+    }
+    //Эти добавил. Считаются в TimeConverter в Java
+    @Test
+    public void secondsToDays() {
+        int expectedResult = 18234107;
+        // Сфигали он в TimeConverter расчитал 18234107, а вернул сюда 1.8234107E7??? Пришлось юзать (int)
+        assertEquals((int) timeConverter.secondsToDays(1640467), expectedResult);
+    }
+
+    @Test
+    public void daysToSeconds() {
+        double expectedResult = 1640467;
+        assertEquals(timeConverter.daysToSeconds(18234107), expectedResult);
     }
 
 }

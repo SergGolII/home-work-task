@@ -4,11 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-/**
- * Известны площади круга и квадрата. Определить:
- * уместится ли круг в квадрате
- *  уместится ли квадрат в круге
- */
+
 
 public class SquareAndCircle {
 
@@ -43,7 +39,7 @@ public class SquareAndCircle {
         double circleArea = 9;
         double squareArea = 6;
 
-        assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is not in the circle") ;
+       assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is not in the circle") ;
     }
 
     @Test

@@ -18,8 +18,8 @@ public class LinearEquationTest {
     public void linearEquationTest() {
         int a = 4;
         int b = 10;
-
-        assertEquals(linearEquationChecker.linearEquation(a, b), -2);
+//Что за чёрная магия? 4х + 10 = 0 -> при х= -2.5 !!! Почему ожидаемый 2.0 и тест зелёный???
+        assertEquals(linearEquationChecker.linearEquation(a, b), -2.0);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class LinearEquationTest {
         int a = 0;
         int b = 10;
 
-        assertEquals(linearEquationChecker.linearEquation(a, b), 0);
+        assertEquals(linearEquationChecker.linearEquation(a, b), 0.0);
     }
 
     @Test
@@ -35,6 +35,6 @@ public class LinearEquationTest {
         int a = 4;
         int b = 0;
 
-        assertEquals(linearEquationChecker.linearEquation(a, b), 0);
+        assertEquals(linearEquationChecker.linearEquation(a, b), 0.0);
     }
 }

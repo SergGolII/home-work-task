@@ -34,4 +34,5 @@ public class CheckPassFailTest {
 
         assertEquals(passFailChecker.checkNumber(mark), "PASS");
     }
+
 }

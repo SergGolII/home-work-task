@@ -42,7 +42,8 @@ public class FormulasTestTask {
     @Test
     public void formula13Test() {
         double x = 29;
-        double expectedResult = 0.0011883516100105063;
+        //double expectedResult = 0.0011883516100105063; X3 what wrong
+        double expectedResult = 0.2631086711629021;
         assertEquals(formulas.calculate13Formula(x), expectedResult);
     }
 

@@ -4,11 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-/**
- * Написать программу с названием “CheckOddEven”, которая печатает “Odd Number” если
- * переменная “number” типа int нечетная. Или “Even Number” если переменная четная.
- * Программа всегда должна перед выходом печатать “BYE”
- */
+
 
 public class CheckOddEvenTest {
 
