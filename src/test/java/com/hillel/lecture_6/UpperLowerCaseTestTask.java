@@ -51,6 +51,7 @@ public class UpperLowerCaseTestTask {
         return new Object[][] {
                 //Was "JAVA", need "java". Fixed expected result
                 { "java", "java"},
+                { "JAVa", "java"},
                 { "A StrInG variable ContainS a collection oF chaTactErs surRoundEd by dOuBle quotEs",
                   "a string variable contains a collection of chatacters surrounded by double quotes" },
                 { "TeSt HOme tAsK", "test home task"}
