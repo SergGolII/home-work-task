@@ -16,6 +16,7 @@ public class CountWordsOfEachLengthChecker {
 
         for (int i = 0; i < sentence.length(); i++) {
             if (sentence.charAt(i) != ' ') {
+            if (sentence.charAt(i) != ' ' && sentence.charAt(i) != '.' && sentence.charAt(i) != ',') {
                 counter++;
             } else if (counter == wordLength){
                 result++;
