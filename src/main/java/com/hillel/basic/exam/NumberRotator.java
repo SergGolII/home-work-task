@@ -18,6 +18,20 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
-        return 0;
+
+        long temp;
+
+        String dano = String.valueOf(n);
+        for (int i = 0; i < dano.length() - 1; i++) {
+            if (i != dano.length() - 2) {
+                dano += dano.charAt(i);
+                dano = dano.substring(0, i) + dano.substring(i + 1);
+                temp = Long.parseLong(dano);
+                if (n < temp) {
+                    n = temp;
+                }
+            }
+        }
+        return n;
     }
 }
