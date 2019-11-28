@@ -1,19 +1,18 @@
-package com.hillel.lecture_7;
+package com.hillel.lecture_10;
 
-/**
- * Created by alpa on 11/8/19
- */
-public class FractionNumber {
+public abstract class AbstractCalculator {
 
     private double firstNumber = 0d;
     private double secondNumber = 0d;
 
-    public FractionNumber(){ }
+    public AbstractCalculator(){ }
 
-    public FractionNumber(double firstNumber, double secondNumber){
+    public AbstractCalculator(double firstNumber, double secondNumber){
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
     }
+
+    public abstract void name();
 
     public double plus(double firstNumber, double secondNumber){
         double result = firstNumber + secondNumber;
@@ -28,7 +27,6 @@ public class FractionNumber {
 
     public double minus(double firstNumber, double secondNumber){
         double result = firstNumber - secondNumber;
-        System.out.println(firstNumber + "/" + secondNumber);
         return result;
     }
 
@@ -52,8 +50,7 @@ public class FractionNumber {
     public double division(double firstNumber, double secondNumber){
         double result = 0;
         if (secondNumber == 0){
-            System.out.println("\n" +
-                    "A test where the first number "+firstNumber+" is divided by the second number "+secondNumber+" is incorrect, since division by zero occurs!");
+            System.out.println("A test where the first number "+firstNumber+" is divided by the second number "+secondNumber+" is incorrect, since division by zero occurs!");
         } else {
             result = firstNumber / secondNumber;
         }
@@ -63,14 +60,12 @@ public class FractionNumber {
     public double division(){
         double result = 0;
         if (secondNumber == 0){
-            System.out.println("\n" +
-                    "A test where the first number "+firstNumber+" is divided by the second number "+secondNumber+" is incorrect, since division by zero occurs!");
+            System.out.println("A test where the first number "+firstNumber+" is divided by the second number "+secondNumber+" is incorrect, since division by zero occurs!");
         } else {
             result = firstNumber / secondNumber;
         }
         return result;
     }
-
 
     public double getFirstNumber() {
         return firstNumber;
@@ -90,9 +85,9 @@ public class FractionNumber {
 
     @Override
     public String toString() {
-        return "FractionNumber{" +
-                "firstNumber=" + firstNumber +
-                ", secondNumber=" + secondNumber +
-                '}';
+        return "Our numbers is " +
+                "First = " + firstNumber +
+                ", Second = " + secondNumber;
     }
+
 }
